@@ -3,7 +3,6 @@ from typing import List
 from fastapi import FastAPI
 
 app = FastAPI()
-
 class Ingredient(BaseModel):
    name: str
    quantity: float
@@ -52,4 +51,3 @@ async def delete_recipe(id: int):
    recipes = [r for r in recipes if r.id != id]
    return {"detail": "Recipe deleted"}
 
-app = FastAPI()
